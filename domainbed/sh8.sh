@@ -17,7 +17,7 @@ do
             for command in delete_incomplete launch
             do
                 CUDA_VISIBLE_DEVICES=0,2,6,7,9,10 python -m domainbed.scripts.sweep $command\
-                    --data_dir=/nfs/users/ext_group8/Dataset/224_data/ \
+                    --data_dir=DATASET_PATH \
                     --output_dir=./domainbed/Outputs/v8_cab \
                     --command_launcher multi_gpu\
                     --algorithms Biomedical_Clip_train_CAB \

@@ -11,7 +11,7 @@ do
             for command in delete_incomplete launch
             do
                 CUDA_VISIBLE_DEVICES=1,2,3,4,8,15 python -m domainbed.scripts.sweep $command\
-                    --data_dir=/nfs/users/ext_group8/Dataset/224_data/ \
+                    --data_dir=DATASET_PATH \
                     --output_dir=COOPLVT_TRAINING_LOGS \
                     --command_launcher multi_gpu\
                     --algorithms Clip_train_prompt_from_image_v2 \

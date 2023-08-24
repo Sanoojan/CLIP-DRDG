@@ -2,7 +2,7 @@
 
 **CoOpLVT: Context Optimization with Learnable Visual Tokens**
 
-![Method](images/AI702_diagram_final.png)
+![Method](images/architecture.png)
 
 ## Abstract
 
@@ -21,7 +21,16 @@ conda env create --file=environment.yml
 
 ## Download Dataset
 
-The dataset can be accessed in G42 cluster, more specifically in `/nfs/users/ext_group8/Dataset/224_data/DR`.
+Download the Dataset from [APTOS](https://www.kaggle.com/c/aptos2019-blindness-detection), [EyePACS](https://www.kaggle.com/datasets/mariaherrerot/eyepacspreprocess), [Messidor](https://www.adcis.net/en/third-party/messidor/), and [Messidor-2](https://www.adcis.net/en/third-party/messidor2/). Create the data directory structure like this,
+
+├── DATASET_PATH
+│   ├── DR
+│   │   ├── APTOS
+│   │   ├── EyePACS
+|   |   ├── Messidor
+|   |   ├── Messidor2
+
+
 
 ## Download Pre-trained Weights
 
@@ -60,7 +69,7 @@ do
             for command in delete_incomplete launch
             do
                 CUDA_VISIBLE_DEVICES=1,2,3,4,8,15 python -m domainbed.scripts.sweep $command\
-                    --data_dir=/nfs/users/ext_group8/Dataset/224_data/ \
+                    --data_dir=DATASET_PATH \
                     --output_dir=COOPLVT_TRAINING_LOGS \
                     --command_launcher multi_gpu\
                     --algorithms Clip_train_prompt_from_image_v2 \
@@ -107,3 +116,11 @@ python -m domainbed.scripts.collect_results --input_dir COOPLVT_TRAINING_LOGS
 # Algorithm                  DR                         Avg                       
 # Clip_train_prompt_from_im  40.5 +/- 0.5               40.5
 ```
+
+
+## Acknowledgment
+
+The code is build on the top of DomainBed: a PyTorch suite containing benchmark datasets and algorithms for domain generalization, as introduced in [In Search of Lost Domain Generalization](https://github.com/facebookresearch/DomainBed). CLIP and ViT codes are based on [CLIP](https://github.com/openai/CLIP) and [Timm](https://github.com/huggingface/pytorch-image-models/tree/main/timm) respectively. We thank the authors for releasing their code publicly.
+
+## Licence
+This source code is released under the MIT license, included [here](./LICENSE)

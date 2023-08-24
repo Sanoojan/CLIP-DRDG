@@ -17,7 +17,7 @@ do
             for command in delete_incomplete launch
             do
                 python -m domainbed.scripts.sweep $command\
-                    --data_dir=/nfs/users/ext_group8/Dataset/224_data/ \
+                    --data_dir=DATASET_PATH \
                     --output_dir=./domainbed/Outputs/Eye_resnet-check-lr${lr}\
                     --command_launcher multi_gpu\
                     --algorithms ERM \
