@@ -1,0 +1,26 @@
+False
+Total records: 312
+
+-------- Dataset: DR, model selection method: training-domain validation set
+Algorithm             aptos                 eyepacs               messidor              messidor_2            Avg                  
+Clip_train_prompt_fr  46.2 +/- 4.4          65.9 +/- 2.0          65.5 +/- 0.4          70.6 +/- 0.6          62.1                 
+
+-------- Averages, model selection method: training-domain validation set
+Algorithm                  DR                         Avg                       
+Clip_train_prompt_from_im  62.1 +/- 1.4               62.1                      
+
+-------- Dataset: DR, model selection method: training-domain validation set
+Algorithm             aptos                 eyepacs               messidor              messidor_2            Avg                  
+Clip_train_prompt_fr  31.9 +/- 2.6          32.2 +/- 0.3          46.2 +/- 0.7          51.6 +/- 0.3          40.5                 
+
+-------- Averages, model selection method: training-domain validation set
+Algorithm                  DR                         Avg                       
+Clip_train_prompt_from_im  40.5 +/- 0.5               40.5                      
+
+-------- Dataset: DR, model selection method: training-domain validation set
+Algorithm             aptos                 eyepacs               messidor              messidor_2            Avg                  
+Clip_train_prompt_fr  49.9 +/- 3.7          64.1 +/- 0.3          65.1 +/- 0.6          68.6 +/- 0.9          61.9                 
+
+-------- Averages, model selection method: training-domain validation set
+Algorithm                  DR                         Avg                       
+Clip_train_prompt_from_im  61.9 +/- 0.5               61.9                      
