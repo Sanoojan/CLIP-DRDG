@@ -1,9 +1,4 @@
 #!/bin/bash
-#SBATCH --job-name=DR_baseline
-#SBATCH --gres gpu:2
-#SBATCH --nodes 1
-#SBATCH --partition=ai702
-#SBATCH --reservation=ai702
 
 nvidia-smi
 
