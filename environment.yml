@@ -123,4 +123,3 @@ dependencies:
     - urllib3==1.26.6
     - vit-pytorch==0.27.0
     - wilds==1.2.2
-prefix: /nfs/users/ext_group8/miniconda3/envs/dgbed
