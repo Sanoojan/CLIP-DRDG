@@ -24,7 +24,7 @@ conda env create --file=environment.yml
 ## Download Dataset
 
 Download the Dataset from [APTOS](https://www.kaggle.com/c/aptos2019-blindness-detection), [EyePACS](https://www.kaggle.com/datasets/mariaherrerot/eyepacspreprocess), [Messidor](https://www.adcis.net/en/third-party/messidor/), and [Messidor-2](https://www.adcis.net/en/third-party/messidor2/). Create the data directory structure like this,
-
+'''
 ├── DATASET_PATH
 │   ├── DR
 │   │   ├── APTOS
@@ -32,7 +32,7 @@ Download the Dataset from [APTOS](https://www.kaggle.com/c/aptos2019-blindness-d
 |   |   ├── Messidor
 |   |   ├── Messidor2
 
-
+'''
 
 ## Download Pre-trained Weights
 
